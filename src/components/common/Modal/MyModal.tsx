@@ -1,6 +1,6 @@
 import s from './MyModal.module.scss'
 import {ModalType, setActiveModalAC} from "../../../bll/reducers/modal-reducer";
-import {useDispatch} from "react-redux";
+
 
 
 
@@ -11,11 +11,10 @@ type ModalsPagePropsType = {
 }
 
 const MyModal = ({activeModal, children, title}: ModalsPagePropsType) => {
-    const dispatch = useDispatch()
-
+    //const dispatch = useDispatch()
 
     const dontActive = () => {
-        dispatch(setActiveModalAC(false))
+        //dispatch(setActiveModalAC(false))
     }
 
     return (

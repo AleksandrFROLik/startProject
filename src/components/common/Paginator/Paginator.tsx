@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import {FC, memo, useState} from "react";
 import s from './Paginator.module.scss';
-import SuperButton from "../c2-SuperButton/SuperButton";
+import {CustomButton} from "components/common/CustomButton/CustomButton";
+
 
 
 type PaginatorPropsType = {
@@ -12,7 +13,7 @@ type PaginatorPropsType = {
     disabled?: boolean
 }
 
-const Paginator = React.memo(({
+export const Paginator: FC<PaginatorPropsType> = memo(({
                                   totalCount,
                                   pageSize,
                                   currentPage,
@@ -35,8 +36,8 @@ const Paginator = React.memo(({
     return (
         <div className={s.paginatorContainer}>
 
-            <SuperButton cancel={portionNumber < 2} disabled={portionNumber < 2 || disabled} className={s.button}
-                         onClick={() => setPortionNumber(portionNumber - 1)}>prev</SuperButton>
+            <CustomButton cancel={portionNumber < 2} disabled={portionNumber < 2 || disabled} className={s.button}
+                         onClick={() => setPortionNumber(portionNumber - 1)}>prev</CustomButton>
 
             {pages
                 .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
@@ -45,12 +46,11 @@ const Paginator = React.memo(({
                                 onClick={() => changeNumberPage(p)}>{p}</span>
                 )}
 
-            <SuperButton cancel={portionCount == portionNumber} disabled={portionCount == portionNumber || disabled}
+            <CustomButton cancel={portionCount == portionNumber} disabled={portionCount == portionNumber || disabled}
                          className={s.button}
-                         onClick={() => setPortionNumber(portionNumber + 1)}>next</SuperButton>
+                         onClick={() => setPortionNumber(portionNumber + 1)}>next</CustomButton>
 
         </div>
     )
 })
 
-export default Paginator
