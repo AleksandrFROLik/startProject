@@ -2,14 +2,14 @@ import React, {ChangeEvent, DetailedHTMLProps, FC, InputHTMLAttributes, Keyboard
 import s from 'components/common/CustomInputText/CustomInputText.module.scss'
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-type SuperInputTextPropsType = DefaultInputPropsType & {
+type CustomInputTextPropsType = DefaultInputPropsType & {
     onChangeText?: (value: string) => void
     onEnter?: () => void
     error?: string
     spanClassName?: string
 }
 
-export const CustomInputText: FC<SuperInputTextPropsType> = memo((
+export const CustomInputText: FC<CustomInputTextPropsType> = memo((
     {
         type,
         onChange, onChangeText,

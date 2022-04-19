@@ -10,8 +10,6 @@ type ModalsPagePropsType = {
 
 const MyModal = ({activeModal, children, title}: ModalsPagePropsType) => {
 
-
-
     const dontActive = () => {
         dispatch(setActiveModalAC(false))
     }

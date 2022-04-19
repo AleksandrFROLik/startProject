@@ -1,4 +1,4 @@
-//import {applyMiddleware, combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunkMiddleware from 'redux-thunk';
 import {TypedUseSelectorHook, useSelector} from "react-redux";
 import {modalReducer} from "./reducers/modal-reducer";
