@@ -28,34 +28,23 @@
     "no-alert": "error",
     "no-debugger": "error",
     "no-plusplus": "error",
-    "no-unused-vars": "off",
-    "no-magic-numbers": "off",
+    "no-unused-vars": "warn",
+    "indent": ["off", 2],
+    "no-magic-numbers": "warn",
+    "no-console": "warn",
     "default-param-last": "off",
     "no-use-before-define": "off",
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        "max": 1
-      }
-    ],
-    "@typescript-eslint/no-shadow": [
-      "error"
-    ],
-    "@typescript-eslint/no-unused-vars": [
-      "error"
-    ],
-    "@typescript-eslint/no-magic-numbers": [
-      "error",
+    "no-multiple-empty-lines": ["error", {"max": 1}],
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-magic-numbers": ["error",
       {
         "ignoreEnums": true,
         "ignoreNumericLiteralTypes": true
       }
     ],
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/explicit-function-return-type": ["error",
       {
         "allowExpressions": true
       }
@@ -65,8 +54,7 @@
     "react/display-name": "off",
     "react/react-in-jsx-scope": "off",
     "react/destructuring-assignment": "error",
-    "react/jsx-filename-extension": [
-      1,
+    "react/jsx-filename-extension": [1,
       {
         "extensions": [
           ".jsx",
@@ -74,8 +62,7 @@
         ]
       }
     ],
-    "react/function-component-definition": [
-      2,
+    "react/function-component-definition": [2,
       {
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
@@ -86,7 +73,7 @@
     "import/order": [
       "error",
       {
-        "newlines-between": "always",
+        "newlines-between": "always-and-inside-groups",
         "pathGroupsExcludedImportTypes": [
           "react"
         ],
@@ -99,7 +86,9 @@
           "external",
           "parent",
           "sibling",
-          "index"
+          "index",
+          "object",
+          "type"
         ],
         "pathGroups": [
           {
